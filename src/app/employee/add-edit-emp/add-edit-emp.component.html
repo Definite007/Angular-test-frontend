@@ -1,0 +1,33 @@
+<div class="container flex-row bd-highlight mb-3">
+
+    <div class="form-froup row" style="width: 60%;">
+    
+        <label class="col-6 col-form-label">Employee Name</label>
+        <div class="col-10">
+            <input type="text" class="form-control" [(ngModel)]="EmployeeName"
+            placeholder="Enter Employee Name">
+        </div>
+    
+        <label class="col-6 col-form-label">Department</label>
+        <div class="col-10">
+           <select class="form-control" [(ngModel)]="DepartmentName">
+               <option>--Select--</option>
+               <option *ngFor="let depName of DepartmentsList">
+                   {{depName}}
+               </option>
+           </select>
+        </div>
+    
+        <label class="col-6 col-form-label">Date of joining</label>
+        <div class="col-10">
+            <input type="date"  [(ngModel)]="DateOfJoining">
+        </div>
+    </div>
+    </div>
+    <button (click)="addEmployee()" *ngIf="emp.EmployeeId==0" class="btn btn-primary">
+        Add
+    </button>
+    
+    <button (click)="updateEmployee()" *ngIf="emp.EmployeeId!=0" class="btn btn-primary">
+        Update
+    </button>
