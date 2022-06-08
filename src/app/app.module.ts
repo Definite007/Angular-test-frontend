@@ -11,6 +11,9 @@ import { EmpService } from "./emp.service";
 import {HttpClientModule } from '@angular/common/http';
 import { FormsModule,ReactiveFormsModule } from "@angular/forms";
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { NavComponent } from './nav/nav.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { LoginComponent } from './login/login.component';
     EmployeeComponent,
     ShowEmpComponent,
     AddEditEmpComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent,
+    NavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
