@@ -8,7 +8,7 @@ import { ShowEmpComponent } from './employee/show-emp/show-emp.component';
 import { AddEditEmpComponent } from './employee/add-edit-emp/add-edit-emp.component';
 import { EmpService } from "./emp.service";
 
-import {HttpClientModule } from '@angular/common/http';
+import {HttpClientModule, HttpClientXsrfModule } from '@angular/common/http';
 import { FormsModule,ReactiveFormsModule } from "@angular/forms";
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -31,7 +31,8 @@ import { HomeComponent } from './home/home.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientXsrfModule
   ],
   providers: [EmpService],
   bootstrap: [AppComponent]

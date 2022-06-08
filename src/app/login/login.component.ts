@@ -25,9 +25,7 @@ export class LoginComponent implements OnInit {
     });
   }
   submit(): void {
-    this.http.post('http://localhost:8000/login', this.form.getRawValue(), {
-      withCredentials: true
-    }).subscribe(() => this.router.navigate(['/employee']));
+    this.http.post('http://localhost:8000/login', this.form.getRawValue()).subscribe(() => this.router.navigate(['/employee']));
   }
 
 }

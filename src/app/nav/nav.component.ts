@@ -22,7 +22,7 @@ export class NavComponent implements OnInit {
   }
 
   logout(): void {
-    this.http.post('http://localhost:8000/api/logout', {}, {withCredentials: true})
+    this.http.post('http://localhost:8000/logout', {}, {withCredentials: true})
       .subscribe(() => this.authenticated = false);
   }
 
